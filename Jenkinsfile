@@ -8,7 +8,7 @@ pipeline {
 	TASK_DEFINITION_NAME="my-demo-task"
 	DESIRED_COUNT="1"
         IMAGE_REPO_NAME="demo"
-        IMAGE_TAG="${env.BUILD_NUMBER}"
+       // IMAGE_TAG="${env.BUILD_NUMBER}"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
 	registryCredential = "safwan.kurawlay"
     }
@@ -30,8 +30,8 @@ pipeline {
       steps{
         script {
 	  echo "The build number is ${env.BUILD_NUMBER}"
-          dockerImage = sudo docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}" 
-	  echo +dockerImage
+        //  dockerImage = sudo docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}" 
+	  dockerImage = sudo docker.build "demo:1" 
         }
       }
     }
