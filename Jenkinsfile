@@ -8,7 +8,7 @@ pipeline {
 	TASK_DEFINITION_NAME="my-demo-task"
 	DESIRED_COUNT="1"
         IMAGE_REPO_NAME="demo"
-       // IMAGE_TAG="${env.BUILD_NUMBER}"
+        IMAGE_TAG="${env.BUILD_NUMBER}"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
 	registryCredential = "safwan.kurawlay"
     }
