@@ -29,7 +29,7 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          dockerImage = sudo docker.build "jenkins:demo" 
+          dockerImage = sudo docker.build "${IMAGE_REPO_NAME}:${env.BUILD_ID}" 
         }
       }
     }
