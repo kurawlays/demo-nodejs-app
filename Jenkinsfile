@@ -30,7 +30,8 @@ pipeline {
       steps{
         script {
 	  echo "The build number is ${env.BUILD_NUMBER}"
-          dockerImage = sudo docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}" 
+	  git '…'
+          def dockerImage = sudo docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}" 
 	//def dockerImage = sudo docker.build "demo:1" 
         }
       }
