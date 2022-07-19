@@ -18,6 +18,6 @@
     "requiresCompatibilities": [
              "FARGATE"
     ],
-    "networkMode": "null",
+    "networkMode": "bridge",
     "executionRoleArn": ROLE_ARN
 }
