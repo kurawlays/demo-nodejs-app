@@ -2,7 +2,7 @@
     "family": FAMILY,
     "containerDefinitions": [
         {
-            "image": "REPOSITORY_URI:BUILD_NUMBER",
+            "image": "REPOSITORY_URI:IMAGE_TAG",
             "name": NAME,
 	    "essential": true,
             "portMappings": [
