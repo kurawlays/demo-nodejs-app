@@ -26,17 +26,18 @@ pipeline {
         // }
     }
 
-    post {
+  /*  post {
         success {
             script {
                 new Deployer().deploy()
             }
         }
+       
 
         always {
             script {
                 sh "docker rmi ${env.SERVICE_NAME}:${env.GIT_COMMIT}"
             }
-        }
-    }
+        } 
+    }*/
 }
