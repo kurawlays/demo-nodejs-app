@@ -16,7 +16,7 @@
     "cpu": "256",
     "memory": "512",
     "requiresCompatibilities": [
-             "FARGATE"
+             "EC2"
     ],
     "networkMode": "bridge",
     "executionRoleArn": ROLE_ARN
