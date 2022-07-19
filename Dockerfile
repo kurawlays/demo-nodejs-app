@@ -11,4 +11,4 @@ RUN unzip kindle.zip
 RUN cp -rvf markups-kindle/* .
 RUN rm -rf _MACOS markups-kindle kindle.zip
 CMD ["apachectl", "-D", "FOREGROUND"]
-EXPOSE 3000
+EXPOSE 80
