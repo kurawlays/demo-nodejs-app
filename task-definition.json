@@ -18,5 +18,6 @@
     "requiresCompatibilities": [
              "FARGATE"
     ],
-    "networkMode": "awsvpc"
+    "networkMode": "awsvpc",
+    "executionRoleArn": ROLE_ARN
 }
