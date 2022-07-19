@@ -1,5 +1,3 @@
-import org.sacoding.tools.jenkins.Deployer
-
 pipeline {
     agent any
 
