@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage('Docker image setup') {
             steps {
-                sh "docker build --no-cache --build-arg \"ENV=test\" --tag \"${env.SERVICE_NAME}:${env.BUILD_NUMBER}\" ."
+                sh "docker build --no-cache --build-arg \"ENV=test\" --tag \"${IMAGE_REPO_NAME}:${IMAGE_TAG}\" ."
             }
         }
  	 
@@ -25,7 +25,8 @@ pipeline {
     		 steps{  
         		 script {
 			 docker.withRegistry("https://" + REPOSITORY_URI, "ecr:${AWS_DEFAULT_REGION}:" + registryCredential) {
-                    	 dockerImage.push()
+                    	 sh "docker push "${IMAGE_REPO_NAME}:${IMAGE_TAG}" "
+				 //dockerImage.push()
                 	}
         	 }
         }
