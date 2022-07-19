@@ -25,7 +25,8 @@ pipeline {
     		 steps{  
         		 script {
 			 docker.withRegistry("https://" + REPOSITORY_URI, "ecr:${AWS_DEFAULT_REGION}:" + registryCredential) {
-                    	 sh "docker push demo:latest "
+                    	 sh "docker tag demo:latest 191856567065.dkr.ecr.us-east-1.amazonaws.com/demo:latest"
+			 sh "docker push 191856567065.dkr.ecr.us-east-1.amazonaws.com/demo:latest "
 				 //dockerImage.push()
                 	}
         	 }
