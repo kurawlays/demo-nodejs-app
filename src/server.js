@@ -3,7 +3,7 @@ var http = require('http');
 var server = http.createServer(function(request, response) {
 
     response.writeHead(200, {"Content-Type": "text/plain"});
-    response.end("Hello, Welcome to DevOps CI CD. Welcome to NECSWS India.");
+    response.end("Hello, Welcome to DevOps CI CD Deployment done here at 11:18 am.");
 
 });
 
